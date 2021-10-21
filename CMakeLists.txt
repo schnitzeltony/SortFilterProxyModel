@@ -19,8 +19,8 @@ find_package(Qt5 COMPONENTS Core Qml CONFIG REQUIRED)
 # Build options (exclusive on or the other - not both)
 # * developers might prefer BUILD_OBJECT_LIB
 # * packagers should use BUILD_SHARED_LIB
-option(BUILD_OBJECT_LIB "Build object library. Add code in your project and add \$<TARGET_OBJECTS:SortFilterProxyModel> in your CMakeLists.txt" ON)
-option(BUILD_SHARED_LIB "Build shared library. Build and install library to a folder wher cmake can find it for your project" OFF)
+option(BUILD_OBJECT_LIB "Build object library. Add code in your project and add \$<TARGET_OBJECTS:SortFilterProxyModel> in your CMakeLists.txt" OFF)
+option(BUILD_SHARED_LIB "Build shared library. Build and install library to a folder wher cmake can find it for your project" ON)
 
 if(BUILD_OBJECT_LIB AND BUILD_SHARED_LIB)
     message(FATAL_ERROR "You cannot select both BUILD_OBJECT_LIB and BUILD_SHARED_LIB")
