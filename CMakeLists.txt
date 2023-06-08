@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
 
-set(CMAKE_CXX_STANDARD 11)
-
 project(SortFilterProxyModel LANGUAGES CXX)
 set(SFPM_VERSION_MAJOR "0")
 set(SFPM_VERSION_MINOR "1")
