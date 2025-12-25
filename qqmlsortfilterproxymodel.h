@@ -1,11 +1,11 @@
 #ifndef QQMLSORTFILTERPROXYMODEL_H
 #define QQMLSORTFILTERPROXYMODEL_H
 
-#include <QSortFilterProxyModel>
-#include <QQmlParserStatus>
 #include "filters/filtercontainer.h"
 #include "sorters/sortercontainer.h"
 #include "proxyroles/proxyrolecontainer.h"
+#include <QSortFilterProxyModel>
+#include <QQmlParserStatus>
 
 namespace SortFilterProxyModelQmlNamspace {
 

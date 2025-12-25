@@ -1,6 +1,7 @@
 #ifndef SORTERSSORTERCONTAINER_H
 #define SORTERSSORTERCONTAINER_H
 
+#include "qmlqt5qt6types.h"
 #include <QList>
 #include <QQmlListProperty>
 #include <qqml.h>
@@ -31,8 +32,8 @@ private:
     virtual void onSortersCleared() = 0;
 
     static void append_sorter(QQmlListProperty<Sorter>* list, Sorter* sorter);
-    static int count_sorter(QQmlListProperty<Sorter>* list);
-    static Sorter* at_sorter(QQmlListProperty<Sorter>* list, int index);
+    static qmllistcount count_sorter(QQmlListProperty<Sorter>* list);
+    static Sorter* at_sorter(QQmlListProperty<Sorter>* list, qmllistcount index);
     static void clear_sorters(QQmlListProperty<Sorter>* list);
 };
 

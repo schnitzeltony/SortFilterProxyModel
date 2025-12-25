@@ -129,10 +129,27 @@ void RangeFilter::setMaximumInclusive(bool maximumInclusive)
 bool RangeFilter::filterRow(const QModelIndex& sourceIndex, const QQmlSortFilterProxyModel& proxyModel) const
 {
     QVariant value = sourceData(sourceIndex, proxyModel);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     bool lessThanMin = m_minimumValue.isValid() &&
             (m_minimumInclusive ? value < m_minimumValue : value <= m_minimumValue);
     bool moreThanMax = m_maximumValue.isValid() &&
             (m_maximumInclusive ? value > m_maximumValue : value >= m_maximumValue);
+#else
+    bool lessThanMin = false;;
+    if (!m_minimumValue.isNull()) {
+        QPartialOrdering cmp = QVariant::compare(value, m_minimumValue);
+        lessThanMin = m_minimumInclusive ?
+            cmp == QPartialOrdering::Equivalent || cmp == QPartialOrdering::Less :
+            cmp == QPartialOrdering::Less;
+    }
+    bool moreThanMax = false;
+    if (!m_maximumValue.isNull()) {
+        QPartialOrdering cmp = QVariant::compare(value, m_minimumValue);
+        moreThanMax = m_minimumInclusive ?
+                          cmp == QPartialOrdering::Equivalent || cmp == QPartialOrdering::Greater :
+                          cmp == QPartialOrdering::Greater;
+    }
+#endif
     return !(lessThanMin || moreThanMax);
 }
 

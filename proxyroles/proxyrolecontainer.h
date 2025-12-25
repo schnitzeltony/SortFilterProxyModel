@@ -1,6 +1,7 @@
 #ifndef PROXYROLECONTAINER_H
 #define PROXYROLECONTAINER_H
 
+#include "qmlqt5qt6types.h"
 #include <QList>
 #include <QQmlListProperty>
 
@@ -29,8 +30,8 @@ private:
     virtual void onProxyRolesCleared() = 0;
 
     static void append_proxyRole(QQmlListProperty<ProxyRole>* list, ProxyRole* proxyRole);
-    static int count_proxyRole(QQmlListProperty<ProxyRole>* list);
-    static ProxyRole* at_proxyRole(QQmlListProperty<ProxyRole>* list, int index);
+    static qmllistcount count_proxyRole(QQmlListProperty<ProxyRole>* list);
+    static ProxyRole* at_proxyRole(QQmlListProperty<ProxyRole>* list, qmllistcount index);
     static void clear_proxyRoles(QQmlListProperty<ProxyRole>* list);
 };
 

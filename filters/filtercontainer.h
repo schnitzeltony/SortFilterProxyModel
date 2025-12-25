@@ -1,6 +1,7 @@
 #ifndef FILTERCONTAINER_H
 #define FILTERCONTAINER_H
 
+#include "qmlqt5qt6types.h"
 #include <QList>
 #include <QQmlListProperty>
 #include <qqml.h>
@@ -31,8 +32,8 @@ private:
     virtual void onFiltersCleared() = 0;
 
     static void append_filter(QQmlListProperty<Filter>* list, Filter* filter);
-    static int count_filter(QQmlListProperty<Filter>* list);
-    static Filter* at_filter(QQmlListProperty<Filter>* list, int index);
+    static qmllistcount count_filter(QQmlListProperty<Filter>* list);
+    static Filter* at_filter(QQmlListProperty<Filter>* list, qmllistcount index);
     static void clear_filters(QQmlListProperty<Filter>* list);
 };
 

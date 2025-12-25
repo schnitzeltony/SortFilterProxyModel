@@ -11,8 +11,13 @@ set(PROJECT_VERSION "${SFPM_VERSION_MAJOR}.${SFPM_VERSION_MINOR}.${SFPM_VERSION_
 include(FeatureSummary)
 include(GNUInstallDirs)
 
-# qt5 libs
-find_package(Qt5 COMPONENTS Core Qml CONFIG REQUIRED)
+set(QT_MAJOR_VER "5" CACHE STRING "Qt major version")
+set(QTX "Qt${QT_MAJOR_VER}")
+
+find_package(${QTX} COMPONENTS Core Qml CONFIG REQUIRED)
+if("${QT_MAJOR_VER}" STREQUAL "6")
+    find_package(Qt6 REQUIRED COMPONENTS Core5Compat)
+endif()
 
 # Build options (exclusive on or the other - not both)
 # * developers might prefer BUILD_OBJECT_LIB
@@ -62,6 +67,7 @@ set(SFPM_SOURCES
 
 set(SFPM_HEADERS
     sortfilterproxymodel.h
+    qmlqt5qt6types.h
     proxyroles/filterrole.h
     proxyroles/switchrole.h
     proxyroles/proxyrolecontainer.h
@@ -97,8 +103,8 @@ if(BUILD_OBJECT_LIB)
 
     target_include_directories(SortFilterProxyModel PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}
-        $<TARGET_PROPERTY:Qt5::Core,INTERFACE_INCLUDE_DIRECTORIES>
-        $<TARGET_PROPERTY:Qt5::Qml,INTERFACE_INCLUDE_DIRECTORIES>
+        $<TARGET_PROPERTY:${QTX}::Core,INTERFACE_INCLUDE_DIRECTORIES>
+        $<TARGET_PROPERTY:${QTX}::Qml,INTERFACE_INCLUDE_DIRECTORIES>
         )
 endif(BUILD_OBJECT_LIB)
 
@@ -111,11 +117,17 @@ if(BUILD_SHARED_LIB)
 
     target_link_libraries(SortFilterProxyModel
         PRIVATE
-            Qt5::Core
-            Qt5::Qml
+            ${QTX}::Core
+            ${QTX}::Qml
             # ask linker to help us finding unresolved symbols
             "-Wl,--no-undefined"
         )
+    if("${QT_MAJOR_VER}" STREQUAL "6")
+        target_link_libraries(SortFilterProxyModel
+            PRIVATE
+                Qt6::Core5Compat
+        )
+    endif()
     # install library
     install(TARGETS SortFilterProxyModel
         EXPORT SortFilterProxyModelExport
