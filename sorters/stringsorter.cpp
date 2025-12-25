@@ -1,6 +1,6 @@
 #include "stringsorter.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype StringSorter

@@ -2,7 +2,7 @@
 #include "qqmlsortfilterproxymodel.h"
 #include <QDebug>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype RegExpRole

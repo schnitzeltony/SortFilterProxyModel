@@ -7,7 +7,7 @@
 
 static bool wasRegistered = false;
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype SortFilterProxyModel

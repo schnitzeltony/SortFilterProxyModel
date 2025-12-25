@@ -3,7 +3,7 @@
 
 #include "filtercontainerfilter.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class AnyOfFilter : public FilterContainerFilter {
     Q_OBJECT

@@ -1,6 +1,6 @@
 #include "filtercontainerfilter.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 void FilterContainerFilter::proxyModelCompleted(const QQmlSortFilterProxyModel& proxyModel)
 {
@@ -20,7 +20,7 @@ void FilterContainerFilter::onFilterRemoved(Filter* filter)
     invalidate();
 }
 
-void qqsfpm::FilterContainerFilter::onFiltersCleared()
+void FilterContainerFilter::FilterContainerFilter::onFiltersCleared()
 {
     invalidate();
 }

@@ -3,7 +3,7 @@
 
 #include "filter.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class RoleFilter : public Filter
 {

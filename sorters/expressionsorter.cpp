@@ -2,7 +2,7 @@
 #include "qqmlsortfilterproxymodel.h"
 #include <QtQml>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype ExpressionSorter

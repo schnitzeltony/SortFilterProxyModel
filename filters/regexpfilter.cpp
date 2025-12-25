@@ -1,7 +1,7 @@
 #include "regexpfilter.h"
 #include <QVariant>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype RegExpFilter

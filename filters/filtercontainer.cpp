@@ -2,7 +2,7 @@
 #include "filter.h"
 #include <QtQml>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype FilterContainer

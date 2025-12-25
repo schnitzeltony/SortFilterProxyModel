@@ -1,6 +1,6 @@
 #include "alloffilter.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype AllOf

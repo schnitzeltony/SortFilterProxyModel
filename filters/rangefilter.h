@@ -4,7 +4,7 @@
 #include "rolefilter.h"
 #include <QVariant>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class RangeFilter : public RoleFilter
 {

@@ -4,7 +4,7 @@
 #include "rolesorter.h"
 #include <QCollator>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class StringSorter : public RoleSorter
 {

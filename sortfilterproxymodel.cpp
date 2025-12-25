@@ -1,7 +1,7 @@
 #include "sortfilterproxymodel.h"
 
 // forwards
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 void registerFiltersTypes();
 void registerProxyRoleTypes();
@@ -12,8 +12,8 @@ void registerSorterTypes();
 
 void SortFilterProxyModel::registerQml()
 {
-    qqsfpm::registerFiltersTypes();
-    qqsfpm::registerProxyRoleTypes();
-    qqsfpm::registerQQmlSortFilterProxyModelTypes();
-    qqsfpm::registerSorterTypes();
+    SortFilterProxyModelQmlNamspace::registerFiltersTypes();
+    SortFilterProxyModelQmlNamspace::registerProxyRoleTypes();
+    SortFilterProxyModelQmlNamspace::registerQQmlSortFilterProxyModelTypes();
+    SortFilterProxyModelQmlNamspace::registerSorterTypes();
 }

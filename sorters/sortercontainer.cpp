@@ -2,7 +2,7 @@
 #include "sorter.h"
 #include <QtQml>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype SorterContainer

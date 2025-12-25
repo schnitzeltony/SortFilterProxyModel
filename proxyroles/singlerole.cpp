@@ -1,7 +1,7 @@
 #include "singlerole.h"
 #include <QVariant>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype SingleRole

@@ -1,7 +1,7 @@
 #include "rolesorter.h"
 #include "qqmlsortfilterproxymodel.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype RoleSorter

@@ -1,6 +1,6 @@
 #include "rangefilter.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype RangeFilter

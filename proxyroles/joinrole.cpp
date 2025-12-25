@@ -1,7 +1,7 @@
 #include "joinrole.h"
 #include "qqmlsortfilterproxymodel.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype JoinRole

@@ -1,6 +1,6 @@
 #include "anyoffilter.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype AnyOf

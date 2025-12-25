@@ -6,7 +6,7 @@
 #include <qqml.h>
 #include <QPointer>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class Sorter;
 class QQmlSortFilterProxyModel;
@@ -61,8 +61,8 @@ private:
 }
 
 #define SorterContainer_iid "fr.grecko.SortFilterProxyModel.SorterContainer"
-Q_DECLARE_INTERFACE(qqsfpm::SorterContainer, SorterContainer_iid)
+Q_DECLARE_INTERFACE(SortFilterProxyModelQmlNamspace::SorterContainer, SorterContainer_iid)
 
-QML_DECLARE_TYPEINFO(qqsfpm::SorterContainerAttached, QML_HAS_ATTACHED_PROPERTIES)
+QML_DECLARE_TYPEINFO(SortFilterProxyModelQmlNamspace::SorterContainerAttached, QML_HAS_ATTACHED_PROPERTIES)
 
 #endif // SORTERSSORTERCONTAINER_H

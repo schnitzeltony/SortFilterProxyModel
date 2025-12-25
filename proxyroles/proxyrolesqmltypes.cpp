@@ -9,7 +9,7 @@
 
 static bool wasRegistered = false;
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 void registerProxyRoleTypes() {
     if(!wasRegistered) {

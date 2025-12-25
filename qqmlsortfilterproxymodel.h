@@ -7,7 +7,7 @@
 #include "sorters/sortercontainer.h"
 #include "proxyroles/proxyrolecontainer.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class QQmlSortFilterProxyModel : public QSortFilterProxyModel,
                                  public QQmlParserStatus,
@@ -17,9 +17,9 @@ class QQmlSortFilterProxyModel : public QSortFilterProxyModel,
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
-    Q_INTERFACES(qqsfpm::FilterContainer)
-    Q_INTERFACES(qqsfpm::SorterContainer)
-    Q_INTERFACES(qqsfpm::ProxyRoleContainer)
+    Q_INTERFACES(SortFilterProxyModelQmlNamspace::FilterContainer)
+    Q_INTERFACES(SortFilterProxyModelQmlNamspace::SorterContainer)
+    Q_INTERFACES(SortFilterProxyModelQmlNamspace::ProxyRoleContainer)
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(bool delayed READ delayed WRITE setDelayed NOTIFY delayedChanged)
@@ -31,9 +31,9 @@ class QQmlSortFilterProxyModel : public QSortFilterProxyModel,
     Q_PROPERTY(QString sortRoleName READ sortRoleName WRITE setSortRoleName NOTIFY sortRoleNameChanged)
     Q_PROPERTY(bool ascendingSortOrder READ ascendingSortOrder WRITE setAscendingSortOrder NOTIFY ascendingSortOrderChanged)
 
-    Q_PROPERTY(QQmlListProperty<qqsfpm::Filter> filters READ filtersListProperty)
-    Q_PROPERTY(QQmlListProperty<qqsfpm::Sorter> sorters READ sortersListProperty)
-    Q_PROPERTY(QQmlListProperty<qqsfpm::ProxyRole> proxyRoles READ proxyRolesListProperty)
+    Q_PROPERTY(QQmlListProperty<SortFilterProxyModelQmlNamspace::Filter> filters READ filtersListProperty)
+    Q_PROPERTY(QQmlListProperty<SortFilterProxyModelQmlNamspace::Sorter> sorters READ sortersListProperty)
+    Q_PROPERTY(QQmlListProperty<SortFilterProxyModelQmlNamspace::ProxyRole> proxyRoles READ proxyRolesListProperty)
 
 public:
     QQmlSortFilterProxyModel(QObject* parent = 0);

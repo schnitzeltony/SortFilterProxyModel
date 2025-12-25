@@ -6,7 +6,7 @@
 
 class QQmlExpression;
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class QQmlSortFilterProxyModel;
 

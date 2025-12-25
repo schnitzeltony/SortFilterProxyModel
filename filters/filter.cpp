@@ -1,7 +1,7 @@
 #include "filter.h"
 #include "qqmlsortfilterproxymodel.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype Filter

@@ -4,13 +4,13 @@
 #include "singlerole.h"
 #include "filters/filtercontainer.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class FilterRole : public SingleRole, public FilterContainer
 {
     Q_OBJECT
-    Q_INTERFACES(qqsfpm::FilterContainer)
-    Q_PROPERTY(QQmlListProperty<qqsfpm::Filter> filters READ filtersListProperty)
+    Q_INTERFACES(SortFilterProxyModelQmlNamspace::FilterContainer)
+    Q_PROPERTY(QQmlListProperty<SortFilterProxyModelQmlNamspace::Filter> filters READ filtersListProperty)
     Q_CLASSINFO("DefaultProperty", "filters")
 
 public:

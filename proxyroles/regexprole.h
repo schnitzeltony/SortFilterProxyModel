@@ -4,7 +4,7 @@
 #include "proxyrole.h"
 #include <QRegularExpression>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class RegExpRole : public ProxyRole
 {

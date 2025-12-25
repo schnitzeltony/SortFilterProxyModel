@@ -4,7 +4,7 @@
 #include "filter.h"
 #include <QVariant>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class IndexFilter: public Filter {
     Q_OBJECT

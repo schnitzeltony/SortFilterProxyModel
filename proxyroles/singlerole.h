@@ -3,7 +3,7 @@
 
 #include "proxyrole.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class SingleRole : public ProxyRole
 {

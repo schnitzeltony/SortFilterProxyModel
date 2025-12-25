@@ -1,6 +1,6 @@
 #include "proxyrolecontainer.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 QList<ProxyRole*> ProxyRoleContainer::proxyRoles() const
 {

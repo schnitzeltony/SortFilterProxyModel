@@ -3,7 +3,7 @@
 
 #include <QObject>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class QQmlSortFilterProxyModel;
 

@@ -1,6 +1,6 @@
 #include "valuefilter.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 /*!
     \qmltype ValueFilter

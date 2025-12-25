@@ -3,7 +3,7 @@
 
 #include "singlerole.h"
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class JoinRole : public SingleRole
 {

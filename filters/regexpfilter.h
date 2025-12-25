@@ -4,7 +4,7 @@
 #include "rolefilter.h"
 #include <QRegExp>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class RegExpFilter : public RoleFilter {
     Q_OBJECT

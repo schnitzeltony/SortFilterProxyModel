@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QMutex>
 
-namespace qqsfpm {
+namespace SortFilterProxyModelQmlNamspace {
 
 class QQmlSortFilterProxyModel;
 
