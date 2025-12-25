@@ -108,23 +108,6 @@ void QQmlSortFilterProxyModel::setFilterPattern(const QString& filterPattern)
     Q_EMIT filterPatternChanged();
 }
 
-QQmlSortFilterProxyModel::PatternSyntax QQmlSortFilterProxyModel::filterPatternSyntax() const
-{
-    return static_cast<PatternSyntax>(filterRegExp().patternSyntax());
-}
-
-void QQmlSortFilterProxyModel::setFilterPatternSyntax(QQmlSortFilterProxyModel::PatternSyntax patternSyntax)
-{
-    QRegExp regExp = filterRegExp();
-    QRegExp::PatternSyntax patternSyntaxTmp = static_cast<QRegExp::PatternSyntax>(patternSyntax);
-    if (regExp.patternSyntax() == patternSyntaxTmp)
-        return;
-
-    regExp.setPatternSyntax(patternSyntaxTmp);
-    QSortFilterProxyModel::setFilterRegExp(regExp);
-    Q_EMIT filterPatternSyntaxChanged();
-}
-
 const QVariant& QQmlSortFilterProxyModel::filterValue() const
 {
     return m_filterValue;
